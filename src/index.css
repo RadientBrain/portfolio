@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --scroll: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", ui-sans-serif, system-ui;
+  background: radial-gradient(circle at top, rgba(14, 165, 233, 0.12), transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.12), transparent 40%),
+    #f8fafc;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.14), transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.section-padding {
+  @apply px-6 py-20 sm:px-10 lg:px-16;
+}
+
+.glass {
+  @apply bg-white/90 backdrop-blur-lg border border-slate-200/80 shadow-[0_20px_40px_rgba(15,23,42,0.08)];
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.parallax-float {
+  transform: translateY(calc(var(--scroll) * 0.03px));
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  transform-origin: left;
+  transform: scaleX(var(--scroll-progress, 0));
+  background: linear-gradient(90deg, rgba(14, 165, 233, 0.9), rgba(249, 115, 22, 0.9));
+  z-index: 60;
+}
+
+.masonry {
+  column-gap: 1.5rem;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+.v-marquee {
+  position: relative;
+  overflow: hidden;
+  height: 560px;
+}
+
+.v-marquee-track {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: v-marquee var(--marquee-duration, 28s) linear infinite;
+}
+
+.v-marquee-reverse {
+  animation-direction: reverse;
+}
+
+@keyframes v-marquee {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.pattern-grid {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.25;
+}
+
+.pattern-dots {
+  background-image: radial-gradient(rgba(14, 165, 233, 0.25) 1px, transparent 1px);
+  background-size: 18px 18px;
+  opacity: 0.2;
+}
+
+.sheen {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(249, 115, 22, 0.12), transparent 60%);
+}
+
+.marquee {
+  --marquee-duration: 28s;
+  --marquee-gap: 1.5rem;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  gap: var(--marquee-gap);
+  width: max-content;
+  animation: marquee var(--marquee-duration) linear infinite;
+}
+
+.marquee-reverse {
+  animation-direction: reverse;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
