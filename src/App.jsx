@@ -62,6 +62,62 @@ const App = () => {
     };
   }, []);
 
+  const techMarqueePrimary = [
+    "Golang",
+    "Python",
+    "AI",
+    "LangChain",
+    "AWS",
+    "OpenCV",
+    "JavaScript",
+    "TypeScript",
+    "NodeJS",
+    "GCP",
+    "Express",
+    "MongoDB",
+    "PostgreSQL",
+    "Git",
+    "REST",
+    "IPFS",
+    "Java",
+    "Deep Learning",
+    "Anaconda",
+    "Spyder",
+    "GPU",
+    "Google Colab",
+    "Ceramic Network",
+    "Docker",
+    "DigitalOcean",
+    "BigQuery",
+    "MERN",
+    "Kubernetes",
+    "Microservices"
+  ];
+
+  const techMarqueeSecondary = [
+    "Python",
+    "TypeScript",
+    "React",
+    "Git",
+    "Tkinter",
+    "Pyttsx3",
+    "PIL",
+    "LangChain",
+    "Chroma",
+    "Railway",
+    "PostgreSQL",
+    "Figma",
+    "FastAPI",
+    "Uvicorn",
+    "REST APIs",
+    "Socket.io",
+    "OpenAI",
+    "SMTP",
+    "BeautifulSoup",
+    "Firebase",
+    "Google Cloud Platform"
+  ];
+
   return (
     <div className="relative min-h-screen overflow-hidden text-ink-900">
       <div className="scroll-progress" aria-hidden="true" />
@@ -203,6 +259,40 @@ const App = () => {
                     "Accountable"
                   ].map((item) => (
                     <span key={item} className="rounded-full border border-ink-900/10 bg-canvas-50/80 px-3 py-2">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 pb-16 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-6xl">
+            <div className="glass rounded-3xl px-6 py-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+                Tech I build with
+              </p>
+              <div className="marquee mt-4" style={{ "--marquee-duration": "28s" }}>
+                <div className="marquee-track">
+                  {[...techMarqueePrimary, ...techMarqueePrimary].map((item, index) => (
+                    <span
+                      key={`${item}-${index}`}
+                      className="rounded-full border border-ink-900/10 bg-canvas-50/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="marquee mt-4" style={{ "--marquee-duration": "32s" }}>
+                <div className="marquee-track marquee-reverse">
+                  {[...techMarqueeSecondary, ...techMarqueeSecondary].map((item, index) => (
+                    <span
+                      key={`${item}-${index}`}
+                      className="rounded-full border border-ink-900/10 bg-canvas-50/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600"
+                    >
                       {item}
                     </span>
                   ))}
