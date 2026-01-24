@@ -1,7 +1,7 @@
 const ProjectCard = ({ project, featured = false }) => {
   return (
     <article
-      className={`glass flex h-full flex-col rounded-3xl p-6 transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-glow ${
+      className={`glass flex h-full flex-col rounded-3xl p-6 transition hover:-translate-y-1 hover:border-ink-900/20 hover:shadow-glow ${
         featured ? "relative overflow-hidden" : ""
       }`}
     >

@@ -75,15 +75,15 @@ const App = () => {
           <div className="pointer-events-none absolute inset-0 -z-10">
             <div className="absolute left-6 top-10 h-40 w-40 rounded-full border border-brand-500/30" />
             <div className="absolute right-10 top-20 h-48 w-48 rounded-full border border-accent-500/30" />
-            <div className="absolute bottom-10 left-1/2 hidden h-32 w-32 -translate-x-1/2 rounded-full border border-slate-300/60 sm:block" />
+            <div className="absolute bottom-10 left-1/2 hidden h-32 w-32 -translate-x-1/2 rounded-full border border-ink-900/15 sm:block" />
           </div>
           <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-8">
               <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 reveal" data-reveal>
-                <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">
+                <span className="rounded-full border border-ink-900/10 bg-canvas-50/80 px-4 py-2">
                   {profile.title}
                 </span>
-                <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">
+                <span className="rounded-full border border-ink-900/10 bg-canvas-50/80 px-4 py-2">
                   Leadership + Execution
                 </span>
               </div>
@@ -113,13 +113,13 @@ const App = () => {
               >
                 <a
                   href="#projects"
-                  className="rounded-full bg-ink-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-ink-700"
+                  className="rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-600"
                 >
                   Explore projects
                 </a>
                 <a
                   href="#contact"
-                  className="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-ink-900 transition hover:border-slate-400"
+                  className="rounded-full border border-ink-900/20 px-6 py-3 text-sm font-semibold text-ink-900 transition hover:border-ink-900/40"
                 >
                   Start a conversation
                 </a>
@@ -130,7 +130,7 @@ const App = () => {
                 style={{ "--reveal-delay": "380ms" }}
               >
                 {profile.stats.map((stat) => (
-                  <div key={stat.label} className="rounded-2xl border border-slate-200 bg-white/70 p-4">
+                  <div key={stat.label} className="rounded-2xl border border-ink-900/10 bg-canvas-50/80 p-4">
                     <p className="text-2xl font-semibold text-ink-900">{stat.value}</p>
                     <p className="text-sm text-slate-600">{stat.label}</p>
                   </div>
@@ -177,7 +177,7 @@ const App = () => {
                     "LLM workflows with measurable outcomes",
                     "Reliability, evals, and safety guardrails"
                   ].map((item) => (
-                    <div key={item} className="flex items-start gap-3 rounded-2xl bg-white/70 p-3">
+                    <div key={item} className="flex items-start gap-3 rounded-2xl bg-canvas-50/80 p-3">
                       <span className="mt-1 h-2 w-2 rounded-full bg-accent-500" aria-hidden="true" />
                       <p className="text-sm text-slate-600">{item}</p>
                     </div>
@@ -185,7 +185,7 @@ const App = () => {
                 </div>
               </div>
               <div
-                className="glass rounded-3xl border border-slate-200 p-6 reveal"
+                className="glass rounded-3xl border border-ink-900/10 p-6 reveal"
                 data-reveal
                 style={{ "--reveal-delay": "240ms" }}
               >
@@ -202,7 +202,7 @@ const App = () => {
                     "Perseverant",
                     "Accountable"
                   ].map((item) => (
-                    <span key={item} className="rounded-full border border-slate-200 bg-white/70 px-3 py-2">
+                    <span key={item} className="rounded-full border border-ink-900/10 bg-canvas-50/80 px-3 py-2">
                       {item}
                     </span>
                   ))}
@@ -214,7 +214,7 @@ const App = () => {
 
         <section id="about" className="section-padding relative">
           <div className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute left-0 top-12 h-48 w-48 rounded-3xl border border-slate-200 bg-white/40" />
+            <div className="absolute left-0 top-12 h-48 w-48 rounded-3xl border border-ink-900/10 bg-canvas-50/40" />
             <div className="absolute right-0 top-28 h-56 w-56 rounded-3xl border border-brand-500/20 bg-brand-500/5" />
             <div className="pattern-grid absolute bottom-0 left-1/2 h-40 w-[70%] -translate-x-1/2 rounded-3xl" />
           </div>
@@ -251,7 +251,7 @@ const App = () => {
                       "Trustworthy delivery",
                       "Outcome-driven execution"
                     ].map((item) => (
-                      <div key={item} className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3 text-sm">
+                      <div key={item} className="rounded-2xl border border-ink-900/10 bg-canvas-50/80 px-4 py-3 text-sm">
                         {item}
                       </div>
                     ))}
@@ -272,7 +272,7 @@ const App = () => {
                     {researchSpotlight.stack.map((item) => (
                       <span
                         key={item}
-                        className="rounded-full bg-white px-3 py-1 text-xs font-medium text-slate-600"
+                        className="rounded-full bg-canvas-50 px-3 py-1 text-xs font-medium text-slate-600"
                       >
                         {item}
                       </span>
@@ -318,7 +318,7 @@ const App = () => {
                     ))}
                   </div>
                 </div>
-                <div className="glass rounded-3xl border border-slate-200 p-6 reveal" data-reveal>
+                <div className="glass rounded-3xl border border-ink-900/10 p-6 reveal" data-reveal>
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
                     Leadership style
                   </p>
@@ -336,7 +336,7 @@ const App = () => {
                     ))}
                   </div>
                 </div>
-                <div className="glass rounded-3xl border border-slate-200 p-6 reveal" data-reveal>
+                <div className="glass rounded-3xl border border-ink-900/10 p-6 reveal" data-reveal>
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
                     Operating cadence
                   </p>
@@ -352,7 +352,7 @@ const App = () => {
                     ))}
                   </div>
                 </div>
-                <div className="glass rounded-3xl border border-slate-200 p-6 reveal" data-reveal>
+                <div className="glass rounded-3xl border border-ink-900/10 p-6 reveal" data-reveal>
                   <img
                     src={dataProcessing}
                     alt="Data processing illustration"
@@ -409,7 +409,7 @@ const App = () => {
                     ))}
                   </div>
                 </div>
-                <div className="glass rounded-3xl border border-slate-200 p-6 reveal" data-reveal>
+                <div className="glass rounded-3xl border border-ink-900/10 p-6 reveal" data-reveal>
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
                     Delivery reputation
                   </p>
@@ -426,7 +426,7 @@ const App = () => {
                     ))}
                   </div>
                 </div>
-                <div className="glass rounded-3xl border border-slate-200 p-6 reveal" data-reveal>
+                <div className="glass rounded-3xl border border-ink-900/10 p-6 reveal" data-reveal>
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
                     Leadership promise
                   </p>
@@ -478,7 +478,7 @@ const App = () => {
 
         <section id="projects" className="section-padding relative">
           <div className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute left-10 top-16 h-40 w-56 rounded-3xl border border-brand-500/30 bg-white/60" />
+            <div className="absolute left-10 top-16 h-40 w-56 rounded-3xl border border-brand-500/30 bg-canvas-50/70" />
             <div className="absolute right-10 bottom-10 h-52 w-52 rounded-full border border-accent-500/30" />
           </div>
           <div className="mx-auto max-w-6xl">
@@ -600,7 +600,7 @@ const App = () => {
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3 text-sm">
                   {socialLinks.map((link) => (
-                    <span key={link.label} className="rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-slate-600">
+                    <span key={link.label} className="rounded-full border border-ink-900/10 bg-canvas-50/80 px-4 py-2 text-slate-600">
                       {link.label}
                     </span>
                   ))}
@@ -617,7 +617,7 @@ const App = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="glass group flex items-center justify-between rounded-3xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:shadow-glow"
+                    className="glass group flex items-center justify-between rounded-3xl border border-ink-900/10 p-6 transition hover:-translate-y-1 hover:shadow-glow"
                     target="_blank"
                     rel="noreferrer"
                   >

@@ -6,7 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-ink-900/10 bg-canvas-50/90 backdrop-blur shadow-[0_12px_30px_rgba(27,26,23,0.08)]">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
         <a href="#home" className="font-display text-lg font-semibold tracking-tight text-ink-900">
           {profile.name}
@@ -23,14 +23,14 @@ const Navbar = () => {
           ))}
           <a
             href="#projects"
-            className="rounded-full bg-ink-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-ink-700"
+            className="rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-600"
           >
             View work
           </a>
         </div>
         <button
           type="button"
-          className="rounded-full p-2 text-ink-700 transition hover:bg-slate-100 md:hidden"
+          className="rounded-full p-2 text-ink-700 transition hover:bg-canvas-100 md:hidden"
           aria-label="Toggle navigation"
           onClick={() => setOpen((prev) => !prev)}
         >
@@ -42,7 +42,7 @@ const Navbar = () => {
         </button>
       </nav>
       {open && (
-        <div className="border-t border-slate-200/80 bg-white/95 px-6 py-4 md:hidden">
+        <div className="border-t border-ink-900/10 bg-canvas-50/95 px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4 text-sm text-ink-700">
             {navigation.map((item) => (
               <a
@@ -56,7 +56,7 @@ const Navbar = () => {
             ))}
             <a
               href="#projects"
-              className="rounded-full bg-ink-900 px-4 py-2 text-center text-sm font-semibold text-white"
+              className="rounded-full bg-brand-500 px-4 py-2 text-center text-sm font-semibold text-white"
               onClick={() => setOpen(false)}
             >
               View work

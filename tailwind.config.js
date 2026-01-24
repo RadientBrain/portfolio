@@ -7,29 +7,29 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Space Grotesk", "ui-sans-serif", "system-ui"],
-        body: ["Manrope", "ui-sans-serif", "system-ui"]
+        display: ["Fraunces", "ui-serif", "Georgia"],
+        body: ["Outfit", "ui-sans-serif", "system-ui"]
       },
       colors: {
         canvas: {
-          50: "#f8fafc",
-          100: "#f1f5f9"
+          50: "#fdf9f3",
+          100: "#f4ede3"
         },
         ink: {
-          900: "#0b1120",
-          700: "#1f2937"
+          900: "#1b1a17",
+          700: "#2f2a25"
         },
         brand: {
-          500: "#0ea5e9",
-          600: "#0284c7"
+          500: "#1f6f5c",
+          600: "#165346"
         },
         accent: {
-          500: "#f97316",
-          600: "#ea580c"
+          500: "#d4a24b",
+          600: "#b7852f"
         }
       },
       boxShadow: {
-        glow: "0 24px 64px rgba(14, 165, 233, 0.18)"
+        glow: "0 24px 64px rgba(31, 111, 92, 0.2)"
       }
     }
   },

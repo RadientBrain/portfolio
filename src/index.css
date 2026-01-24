@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -14,10 +14,12 @@ html {
 }
 
 body {
-  font-family: "Manrope", ui-sans-serif, system-ui;
-  background: radial-gradient(circle at top, rgba(14, 165, 233, 0.12), transparent 55%),
-    radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.12), transparent 40%),
-    #f8fafc;
+  font-family: "Outfit", ui-sans-serif, system-ui;
+  background: radial-gradient(circle at 18% 12%, rgba(31, 111, 92, 0.18), transparent 55%),
+    radial-gradient(circle at 82% 10%, rgba(212, 162, 75, 0.2), transparent 52%),
+    radial-gradient(circle at 70% 70%, rgba(27, 26, 23, 0.08), transparent 60%),
+    linear-gradient(120deg, rgba(253, 249, 243, 0.9), rgba(244, 237, 227, 0.85)),
+    #fdf9f3;
   min-height: 100vh;
 }
 
@@ -25,8 +27,14 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.18), transparent 45%),
-    radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.14), transparent 40%);
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.6), transparent 45%),
+    repeating-linear-gradient(
+      120deg,
+      rgba(27, 26, 23, 0.05) 0,
+      rgba(27, 26, 23, 0.05) 1px,
+      transparent 1px,
+      transparent 12px
+    );
   pointer-events: none;
   z-index: -1;
 }
@@ -36,7 +44,7 @@ body::before {
 }
 
 .glass {
-  @apply bg-white/90 backdrop-blur-lg border border-slate-200/80 shadow-[0_20px_40px_rgba(15,23,42,0.08)];
+  @apply bg-gradient-to-br from-white/90 to-canvas-50/80 backdrop-blur-lg border border-ink-900/10 shadow-[0_24px_60px_rgba(27,26,23,0.12)];
 }
 
 .reveal {
@@ -63,7 +71,7 @@ body::before {
   width: 100%;
   transform-origin: left;
   transform: scaleX(var(--scroll-progress, 0));
-  background: linear-gradient(90deg, rgba(14, 165, 233, 0.9), rgba(249, 115, 22, 0.9));
+  background: linear-gradient(90deg, rgba(31, 111, 92, 0.9), rgba(212, 162, 75, 0.95));
   z-index: 60;
 }
 
@@ -103,20 +111,25 @@ body::before {
 }
 
 .pattern-grid {
-  background-image: linear-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(27, 26, 23, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 26, 23, 0.08) 1px, transparent 1px);
   background-size: 28px 28px;
   opacity: 0.25;
 }
 
 .pattern-dots {
-  background-image: radial-gradient(rgba(14, 165, 233, 0.25) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(31, 111, 92, 0.28) 1px, transparent 1px);
   background-size: 18px 18px;
   opacity: 0.2;
 }
 
 .sheen {
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(249, 115, 22, 0.12), transparent 60%);
+  background: linear-gradient(
+    135deg,
+    rgba(31, 111, 92, 0.22),
+    rgba(212, 162, 75, 0.18),
+    transparent 60%
+  );
 }
 
 .marquee {
