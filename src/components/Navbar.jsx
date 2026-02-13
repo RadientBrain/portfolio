@@ -6,7 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink-900/10 bg-canvas-50/90 backdrop-blur shadow-[0_12px_30px_rgba(27,26,23,0.08)]">
+    <header className="sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-xl shadow-[0_14px_36px_rgba(20,17,15,0.08)]">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
         <a href="#home" className="font-display text-lg font-semibold tracking-tight text-ink-900">
           {profile.name}
@@ -21,10 +21,7 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <a
-            href="#projects"
-            className="rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-600"
-          >
+          <a href="#projects" className="btn-primary px-5 py-2 text-xs">
             View work
           </a>
         </div>
@@ -42,7 +39,7 @@ const Navbar = () => {
         </button>
       </nav>
       {open && (
-        <div className="border-t border-ink-900/10 bg-canvas-50/95 px-6 py-4 md:hidden">
+          <div className="border-t border-ink-900/10 bg-white/90 px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4 text-sm text-ink-700">
             {navigation.map((item) => (
               <a
@@ -54,11 +51,7 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <a
-              href="#projects"
-              className="rounded-full bg-brand-500 px-4 py-2 text-center text-sm font-semibold text-white"
-              onClick={() => setOpen(false)}
-            >
+            <a href="#projects" className="btn-primary px-5 py-2 text-xs" onClick={() => setOpen(false)}>
               View work
             </a>
           </div>

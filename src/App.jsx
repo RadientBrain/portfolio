@@ -121,25 +121,31 @@ const App = () => {
   return (
     <div className="relative min-h-screen overflow-hidden text-ink-900">
       <div className="scroll-progress" aria-hidden="true" />
-      <div className="pointer-events-none absolute left-1/2 top-[-120px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-brand-500/20 blur-[120px] parallax-float" />
-      <div className="pointer-events-none absolute right-[-120px] top-[280px] h-[380px] w-[380px] rounded-full bg-accent-500/20 blur-[120px]" />
-      <div className="pointer-events-none absolute left-[-180px] top-[640px] h-[420px] w-[420px] rounded-full bg-brand-500/10 blur-[140px]" />
+      <div
+        className="pointer-events-none absolute left-1/2 top-[-140px] h-[420px] w-[420px] -translate-x-1/2 orb float-slow parallax-float"
+        style={{ "--orb-color": "rgba(29, 180, 154, 0.4)" }}
+      />
+      <div
+        className="pointer-events-none absolute right-[-120px] top-[260px] h-[360px] w-[360px] orb parallax-float"
+        style={{ "--orb-color": "rgba(244, 184, 67, 0.32)" }}
+      />
       <Navbar />
 
       <main>
-        <section id="home" className="section-padding relative">
+        <section id="home" className="section-padding relative overflow-hidden">
           <div className="pointer-events-none absolute inset-0 -z-10">
             <div className="absolute left-6 top-10 h-40 w-40 rounded-full border border-brand-500/30" />
             <div className="absolute right-10 top-20 h-48 w-48 rounded-full border border-accent-500/30" />
             <div className="absolute bottom-10 left-1/2 hidden h-32 w-32 -translate-x-1/2 rounded-full border border-ink-900/15 sm:block" />
+            <div className="absolute right-20 bottom-12 hidden h-20 w-20 rounded-2xl border border-ink-900/10 bg-white/60 backdrop-blur float-slow lg:block" />
           </div>
           <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-8">
               <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 reveal" data-reveal>
-                <span className="rounded-full border border-ink-900/10 bg-canvas-50/80 px-4 py-2">
+                <span className="chip">
                   {profile.title}
                 </span>
-                <span className="rounded-full border border-ink-900/10 bg-canvas-50/80 px-4 py-2">
+                <span className="chip-solid">
                   Leadership + Execution
                 </span>
               </div>
@@ -169,13 +175,13 @@ const App = () => {
               >
                 <a
                   href="#projects"
-                  className="rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-600"
+                  className="btn-primary"
                 >
                   Explore projects
                 </a>
                 <a
                   href="#contact"
-                  className="rounded-full border border-ink-900/20 px-6 py-3 text-sm font-semibold text-ink-900 transition hover:border-ink-900/40"
+                  className="btn-ghost"
                 >
                   Start a conversation
                 </a>
@@ -186,7 +192,7 @@ const App = () => {
                 style={{ "--reveal-delay": "380ms" }}
               >
                 {profile.stats.map((stat) => (
-                  <div key={stat.label} className="rounded-2xl border border-ink-900/10 bg-canvas-50/80 p-4">
+                  <div key={stat.label} className="glass rounded-2xl p-4">
                     <p className="text-2xl font-semibold text-ink-900">{stat.value}</p>
                     <p className="text-sm text-slate-600">{stat.label}</p>
                   </div>
@@ -194,7 +200,7 @@ const App = () => {
               </div>
             </div>
             <div className="space-y-6">
-              <div className="glass relative overflow-hidden rounded-3xl p-6 reveal" data-reveal>
+              <div className="glass relative overflow-hidden rounded-3xl p-6 transition hover:-translate-y-1 hover:shadow-glow reveal" data-reveal>
                 <img
                   src={productIteration}
                   alt=""
@@ -215,11 +221,11 @@ const App = () => {
                 </div>
               </div>
               <div
-                className="glass relative overflow-hidden rounded-3xl p-6 reveal"
+                className="glass relative overflow-hidden rounded-3xl p-6 transition hover:-translate-y-1 hover:shadow-glow reveal"
                 data-reveal
                 style={{ "--reveal-delay": "160ms" }}
               >
-                <div className="absolute right-6 top-6 h-16 w-16 rounded-2xl bg-brand-500/15" />
+                <div className="absolute right-6 top-6 h-16 w-16 rounded-2xl bg-brand-500/15 float-fast" />
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
                   Signature strengths
                 </p>
@@ -241,7 +247,7 @@ const App = () => {
                 </div>
               </div>
               <div
-                className="glass rounded-3xl border border-ink-900/10 p-6 reveal"
+                className="glass rounded-3xl p-6 transition hover:-translate-y-1 hover:shadow-glow reveal"
                 data-reveal
                 style={{ "--reveal-delay": "240ms" }}
               >
@@ -270,7 +276,7 @@ const App = () => {
 
         <section className="px-6 pb-16 sm:px-10 lg:px-16">
           <div className="mx-auto max-w-6xl">
-            <div className="glass rounded-3xl px-6 py-5">
+            <div className="glass relative rounded-3xl px-6 py-5">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
                 Tech I build with
               </p>
